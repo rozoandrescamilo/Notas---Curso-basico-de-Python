@@ -14,13 +14,13 @@
 ## ¿Por qué Python?
 
 Campos profesionales en tecnología que utilizan este lenguaje de programación:
-- **Frontend: ** Se encarga de llevar el diseño de una aplicación o sitio web a código.
-- **IoT: ** Se encarga de darle la capacidad de conectarse a internet a elementos que pueden estar a nuestro alrededor.
+- **Frontend:** Se encarga de llevar el diseño de una aplicación o sitio web a código.
+- **IoT:** Se encarga de darle la capacidad de conectarse a internet a elementos que pueden estar a nuestro alrededor.
 - **IA:** Se encarga de enseñarle a la computadora a resolver un determinado problema sin la necesidad de estar involucrados constantemente.
 - **Backend:** Se encarga de crear la lógica con la cual va a funcionar una determinada aplicación y que va a ser almacenada en un servidor.
-- **DevOps: ** Se encarga de manejar la información almacenada en la nube de una determinada aplicación.
+- **DevOps:** Se encarga de manejar la información almacenada en la nube de una determinada aplicación.
 - **Data Science:** Se encarga de tomar la información relevante de un determinado ambiente y poder sacar conclusiones al respecto.
-- **Video juegos: ** Se encarga de combinar la programación, el diseño y la música para generar grandes experiencias a los usuarios.
+- **Video juegos:** Se encarga de combinar la programación, el diseño y la música para generar grandes experiencias a los usuarios.
 - **Desarrollo móvil:** Se encarga de crear aplicaciones que serán almacenadas en la PlayStore o AppStore, y que podremos hacer uso de ellas desde nuestros smartphones.
 
 Grandes  empresas que utilizan Python:
@@ -31,11 +31,11 @@ Grandes  empresas que utilizan Python:
 
 - [Netflix](http:/https://netflixtechblog.com/python-at-netflix-86b6028b3b3e/ "Netflix")
 
-- [Uber](hthttps://eng.uber.com/tech-stack-part-one-foundation/tp:// "Uber")
+- [Uber](https://eng.uber.com/tech-stack-part-one-foundation/tp:// "Uber")
 
 - [NASA](http://https://www.nccs.nasa.gov/nccs-users/user-events/python-classes "NASA")
 
-- [Tesla](htthttps://wildentrepreneur.org/elon-musk-esta-contratando-para-tesla-y-no-le-importa-si-los-solicitantes-no-tienen-titulo-universitario/p:// "Tesla")
+- [Tesla](https://wildentrepreneur.org/elon-musk-esta-contratando-para-tesla-y-no-le-importa-si-los-solicitantes-no-tienen-titulo-universitario/p:// "Tesla")
 
 ## ¿Que es un algoritmo?
 - Serie de pasos ordenados para resolver un problema.
@@ -56,6 +56,5 @@ El editor seleccionado por preferencia es [Visual Studio Code](https://code.visu
 # Conceptos básicos de Python
 
 ## Explorando operadores aritméticos
-
 
 
