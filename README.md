@@ -112,7 +112,7 @@ Tipos de datos en Python:
 [![6](https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/6.png "6")](http://https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/6.png "6")
 
 ## Primer programa: Convertir moneda local a dólares
-Para el primer programa se crea el archivo **conversor.py** y se abre por medio de **VS Code** para editarlo, primero declaramos la variable pesos que recibirá el valor en COP que el usuario quiere pasar a USD (Lo escrito despues de un **#** hace refencia a un comentario, no lo leerá el programa al ser ejecutado):
+Para el primer programa se hará un conversor de moneda local a dólares para esto se crea el archivo **conversor.py** y se abre por medio de **VS Code** para editarlo, primero declaramos la variable pesos que recibirá el valor en COP que el usuario quiere pasar a USD (Lo escrito despues de un **#** hace refencia a un comentario, no lo leerá el programa al ser ejecutado):
 ```python
 pesos = input("¿Cuantos pesos colombianos tienes?: ")
 pesos = float(pesos) #De tipo flotante para que acepte decimales
