@@ -75,6 +75,7 @@ Cada variable debe tener un nombre único llamado identificador. Eso es muy de a
 Los tipos de datos mas comunes o primitivos son:
 
 [![2](https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/2.png "2")](http://https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/2.png "2")
+
 Tipos de datos en Python:
 
 - Text Type: str
