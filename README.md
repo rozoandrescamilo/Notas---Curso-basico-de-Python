@@ -8,7 +8,9 @@
 [TOCM]
 
 [TOC]
+
 #Introducción
+
 ##¿Por qué Python?
 Campos profesionales en tecnología que utilizan este lenguaje de programación:
 - **Frontend: **Se encarga de llevar el diseño de una aplicación o sitio web a código.
