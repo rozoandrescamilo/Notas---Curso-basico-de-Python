@@ -126,3 +126,35 @@ Al ejecutarlo en nuestra terminal **Cmder** utilizando el comando **py** y luego
 
 [![7](https://github.com/hackmilo/Notas---Curso-b-sico-de-Python/blob/main/img/7.png?raw=true "7")](http://https://github.com/hackmilo/Notas---Curso-b-sico-de-Python/blob/main/img/7.png?raw=true "7")
 
+# Herramientas para programar
+
+## Condicionales
+La diferencia entre **if, elif y else**, y también el tema de hacer comentarios en el código.
+- **if:** Con el ejemplo del código de esta clase: **if opcion == 1**. Aquí, si lo “traducimos”, sería “Si el usuario elige la opción 1, entonces…” y luego viene todo el código por debajo que conocemos como bloque de código.
+- **else:** Si se desea ejecutar otro código en caso de que no se cumpla el if. Ósea, si por ejemplo, el usuario no elige la opción 1, entonces (else)…
+- **elif:** Se utiliza cuando utilizamos múltiples condiciones, lo que en el código de esta clase son la opción 2 y 3. En esta clase, teníamos la opción 1, pero debemos también evaluar qué pasa si el usuario elige la opción 2 o 3, por lo que decimos “que estamos evaluando múltiples condiciones”.
+
+Ejemplo 1: Un programa para saber si un número dado por el usuario es mayor, menor o igual a 5.
+
+```python
+numero = int(input("Escribe un numero: "))
+if numero > 5:
+    print("Es mayor a 5")
+elif numero == 5:
+    print("Es igual a 5")
+else:
+    print("Es menor a 5")
+```
+Ejemplo 2: Programa para saber si al ingresar la edad del usuario será mayor o menor de edad:
+
+```python
+edad = int(input("Escribe tu edad: "))
+if edad > 17:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+```
+**Comentarios en Python:**
+
+Para realizar un comentario (de una sola línea), utilizamos el “#”. Un comentario es simplemente texto, el cual no es ejecutado y no afecta en absoluto en el código. Se utiliza para explicar las líneas de código. Para qué veas cómo se utiliza, mira este ejemplo:
+`dolar = str(dolar) #Convierte el resultado (número) en un string.`
