@@ -57,4 +57,7 @@ El editor seleccionado por preferencia es [Visual Studio Code](https://code.visu
 
 ## Explorando operadores aritméticos
 
+[![img1](https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/1.png)](https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/1.png)
+
+
 
