@@ -269,11 +269,13 @@ Algunas funciones que nos ayudan a trabajar con texto o cadenas de carácteres:
 - **variable[x]** Traer el carácter número x.
 - **len()** Cantidad de caracteres de la variable.
 
+[![9](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/9.png?raw=true "9")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/9.png?raw=true "9")
+
 ### Funciones Built-in
 
 El intérprete de Python tiene una serie de funciones y tipos incluidos en él que están siempre disponibles, solo requiere que las invoquemos. Están listados aquí en orden alfabético.
 
-
+[![10](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/10.png?raw=true "10")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/10.png?raw=true "10")
 
 ## Slices o rebanadas
 
@@ -282,5 +284,40 @@ El formato completo de la rebanada es: **[start : end : step]**, usualmente solo
 
 Ejemplo:
 
+[![11](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/11.png?raw=true "11")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/11.png?raw=true "11")
 
 ## Proyecto: palíndromo
+
+El objetivo de este programa es que el usuario ingrese una palabra y este diferencie si es o no un **palindromo**. Un palindromo es una palabra o frase que se lee igual de izquierda a derecha que de derecha a izquierda. Por ejemplo:  reconocer, robador, rallar, etc.
+
+**if __name__ == "__main__": 
+run()**
+
+La línea anterior es el punto de entrada  o "entry point" de un programa de Python. Una vez que se encuentra Python con esta línea de código, empieza a ejecutar todo lo qué esté abajo, cómo en este ejemplo, la función "run".
+
+```python
+def palindromo(palabra):
+    palabra = palabra.replace(" ", "") #Reemplazar caracter
+    palabra = palabra.lower() #Cambiar a minusculas
+    palabra_invertida = palabra[::-1]
+    if palabra == palabra_invertida:
+        return True
+    else:
+        return False
+
+
+def run():
+    palabra = input("Escribe una palabra: ")
+    es_palindromo = palindromo(palabra)
+    if es_palindromo == True:
+        print("Es palíndromo")
+    else:
+        print("No es un palíndromo")
+
+if __name__ == "__main__": #Punto de entrada para correr run()
+    run()
+```
+
+Al ejecutarlo en la terminal se obtienen los siguientes resultados:
+
+[![12](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/12.png?raw=true "12")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/12.png?raw=true "12")
