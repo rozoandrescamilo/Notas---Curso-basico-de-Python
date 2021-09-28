@@ -72,6 +72,7 @@ Dentro de nuestra terminal se inicializa Python con el comando **py** y se podr�
 
 Cada variable debe tener un nombre único llamado identificador. Eso es muy de ayuda pensar las variables como contenedores que contienen data el cual puede ser cambiado después a través de técnicas de programación.
 
+
 Los tipos de datos mas comunes o primitivos son:
 
 [![2](https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/2.png "2")](http://https://raw.githubusercontent.com/hackmilo/Notas---Curso-b-sico-de-Python/main/img/2.png "2")
@@ -158,3 +159,128 @@ else:
 
 Para realizar un comentario (de una sola línea), utilizamos el “#”. Un comentario es simplemente texto, el cual no es ejecutado y no afecta en absoluto en el código. Se utiliza para explicar las líneas de código. Para qué veas cómo se utiliza, mira este ejemplo:
 `dolar = str(dolar) #Convierte el resultado (número) en un string.`
+
+## Mejora de conversor con condicionales
+
+Teniendo en cuenta el uso de condicionales podemos mejorar un poco nuestro conversor de moneda y tambien agregar un menú para que el usuario escoja la moneda que quiere cambiar a dolares:
+
+```python
+menu = """  
+Bienvenido al conversor de monedas  👌💰📈
+
+1 - Pesos colombianos 
+2 - Pesos argetinos
+3 - Pesos mexicanos
+
+Elige una opción: """
+
+opcion = int(input(menu))
+
+if opcion == 1:
+    pesos = input("¿Cuantos pesos colombianos tienes?: ")
+	pesos = float(pesos)
+	valor dolar = 3668
+	dolares = pesos / valor_dolar
+	dolares = round(dolares, 2)
+	dolares = str(dolares)
+	print("Tienes $" + dolares + " dólares")
+elif opcion == 2:
+    pesos = input("¿Cuantos pesos argentinos tienes?: ")
+	pesos = float(pesos)
+	valor dolar = 91.64
+	dolares = pesos / valor_dolar
+	dolares = round(dolares, 2)
+	dolares = str(dolares)
+	print("Tienes $" + dolares + " dólares")
+elif opcion == 3:
+    pesos = input("¿Cuantos pesos mexicanos tienes?: ")
+	pesos = float(pesos)
+	valor dolar = 20.59
+	dolares = pesos / valor_dolar
+	dolares = round(dolares, 2)
+	dolares = str(dolares)
+	print("Tienes $" + dolares + " dólares")
+else:
+    print("Ingresa una opción correcta por favor")
+```
+## No repetir código con funciones
+
+Una **función** es un bloque de código con un nombre asociado, que recibe cero o más argumentos como entrada, sigue una secuencia de sentencias, la cuales ejecuta una operación deseada y devuelve un valor y/o realiza una tarea, este bloque puede ser llamados cuando se necesite. Para crear una función se utiliza el comando **def** y el nombre de la función.
+
+El uso de funciones es un componente muy importante del paradigma de la programación llamada estructurada, y tiene varias ventajas:
+
+- **Modularización:** permite segmentar un programa complejo en una serie de partes o módulos más simples, facilitando así la programación y el depurado.
+- **Reutilización:** permite reutilizar una misma función en distintos programas.
+
+Ejemplo: La función de una resta con los argumentos a y b.
+
+```python
+>>> def resta(a, b):
+			return a - b
+
+>>> resta(30, 10)
+20
+```
+
+## Modularizando nuestro conversor de monedas
+
+Aplicando el concepto anterior de función se logra reemplazar algunas lineas de código en el programa de conversor al modularizarlo:
+
+```python
+def conversor(tipo_pesos, valor_dolar):
+    pesos = input("¿Cuantos pesos " + tipo_pesos + " tienes?: ")
+    pesos = float(pesos)
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print("Tienes $" + dolares + " dólares")
+
+
+menu = """  
+Bienvenido al conversor de monedas  👌💰📈
+
+1 - Pesos colombianos 
+2 - Pesos argetinos
+3 - Pesos mexicanos
+
+Elige una opción: """
+
+opcion = int(input(menu))
+
+if opcion == 1:
+    conversor("colombiano", 3875)
+elif opcion == 2:
+    conversor("argetinos", 91.64)
+elif opcion == 3:
+    conversor("mexiacanos", 20.59)
+else:
+    print("Ingresa una opción correcta por favor")
+```
+
+## Cadenas de carácteres y funciones Built-in
+
+Algunas funciones que nos ayudan a trabajar con texto o cadenas de carácteres:
+
+- **variable.upper():** Todos los caracteres en MAYÚSCULAS.
+- **variable.capitalize():** Solo la primera en MAYÚSCULA.
+- **variable.lower()** Todos los caracteres en minúscula.
+- **variable.strip()** Eliminar espacios basura del string.
+- **variable.replace(carácter a cambiar, carácter por poner)** Remplazar carácter.
+- **variable[x]** Traer el carácter número x.
+- **len()** Cantidad de caracteres de la variable.
+
+### Funciones Built-in
+
+El intérprete de Python tiene una serie de funciones y tipos incluidos en él que están siempre disponibles, solo requiere que las invoquemos. Están listados aquí en orden alfabético.
+
+
+
+## Slices o rebanadas
+
+Los slices, traducidos al español como “rebanadas", nos permiten dividir los caracteres de un string de múltiples formas.
+El formato completo de la rebanada es: **[start : end : step]**, usualmente solo usamos start y end.
+
+Ejemplo:
+
+
+## Proyecto: palíndromo
