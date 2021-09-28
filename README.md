@@ -61,7 +61,7 @@ Dentro de nuestra terminal se inicializa Python con el comando **py** y se podr�
 - Suma: **+**
 - Resta: **-**
 - División: **/**
-- Multiplicación: *****
+- Multiplicación: *
 - Cociente de una división: **//**
 - Residuo de una división: **%**
 
@@ -269,11 +269,13 @@ Algunas funciones que nos ayudan a trabajar con texto o cadenas de carácteres:
 - **variable[x]** Traer el carácter número x.
 - **len()** Cantidad de caracteres de la variable.
 
+[![9](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/9.png?raw=true "9")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/9.png?raw=true "9")
+
 ### Funciones Built-in
 
 El intérprete de Python tiene una serie de funciones y tipos incluidos en él que están siempre disponibles, solo requiere que las invoquemos. Están listados aquí en orden alfabético.
 
-
+[![10](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/10.png?raw=true "10")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/10.png?raw=true "10")
 
 ## Slices o rebanadas
 
@@ -282,5 +284,249 @@ El formato completo de la rebanada es: **[start : end : step]**, usualmente solo
 
 Ejemplo:
 
+[![11](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/11.png?raw=true "11")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/11.png?raw=true "11")
 
 ## Proyecto: palíndromo
+
+El objetivo de este programa es que el usuario ingrese una palabra y este diferencie si es o no un **palindromo**. Un palindromo es una palabra o frase que se lee igual de izquierda a derecha que de derecha a izquierda. Por ejemplo:  reconocer, robador, rallar, etc.
+
+**if __name__ == "__main__": 
+run()**
+
+La línea anterior es el punto de entrada  o "entry point" de un programa de Python. Una vez que se encuentra Python con esta línea de código, empieza a ejecutar todo lo qué esté abajo, cómo en este ejemplo, la función "run".
+
+```python
+def palindromo(palabra):
+    palabra = palabra.replace(" ", "") #Reemplazar caracter
+    palabra = palabra.lower() #Cambiar a minusculas
+    palabra_invertida = palabra[::-1]
+    if palabra == palabra_invertida:
+        return True
+    else:
+        return False
+
+
+def run():
+    palabra = input("Escribe una palabra: ")
+    es_palindromo = palindromo(palabra)
+    if es_palindromo == True:
+        print("Es palíndromo")
+    else:
+        print("No es un palíndromo")
+
+if __name__ == "__main__": #Punto de entrada para correr run()
+    run()
+```
+
+Al ejecutarlo en la terminal se obtienen los siguientes resultados:
+
+[![12](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/12.png?raw=true "12")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/12.png?raw=true "12")
+
+# Bucles
+
+Los bucles son otra herramienta para alterar el flujo normal de un programa. Nos permiten repetir una porción de código tantas veces como queramos. Python incluye únicamente dos tipos de bucle: while y for.
+
+## Ciclo while
+
+La palabra reservada while ejecuta una porción de código una y otra vez hasta que la condición especificada sea falsa; o, dicho de otro modo, ejecuta una porción de código mientras que la condición sea verdadera.
+A menera de ejemplo se realiza un programa que muestre el resultado de elevar el número 2 con los exponenetes de 0 a 1000000:
+
+```python
+def run():
+    LIMITE = 1000000
+
+    contador = 0
+    potencia_2 = 2**contador
+    while potencia_2 < LIMITE:
+        print("2 elevado a " + str(contador) + " es igual a: " + str(potencia_2))
+        contador = contador + 1
+        potencia_2 = 2**contador
+
+if __name__ == "__main__":
+    run()
+```
+
+Al ejecutarlo en la terminal se obtienen los siguientes resultados:
+
+[![13](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/13.png?raw=true "13")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/13.png?raw=true "13")
+
+## Ciclo for
+
+El bucle for se utiliza para recorrer los elementos de un objeto iterable (lista, tupla, conjunto, diccionario, …) y ejecutar un bloque de código. En cada paso de la iteración se tiene en cuenta a un único elemento del objeto iterable, sobre el cuál se pueden aplicar una serie de operaciones.
+Para probar el concepto se realiza las diferencias entre imprimir números del 1 al 1000 de diferentes formas, siendo el ciclo for la mejor y mas corta manera:
+
+```python
+#Diferencias entre hacer una lista, un ciclo while y un ciclo for:
+
+# a = list(range(1000))
+# print(a)
+
+# contador = 1
+# print(contador)
+# while contador < 1000:
+#     contador += 1
+#     print(contador)
+
+# for contador in range(1, 1001):
+#     print(contador)
+
+for i in range(10):
+    print(11 * i)
+```
+
+[![14](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/14.png?raw=true "14")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/14.png?raw=true "14")
+
+## Recorrer un string con un ciclo for
+
+En este ejemplo se utiliza el ciclo for para recorrer el string de una entrada, procesarlo como mayúscula caracter por caracter:
+
+```python
+def run():
+    # nombre = input("Escribe tu nombre: ")
+    # for letra in nombre:
+    #     print(letra)
+
+    frase = input("Escribe una frase: ")
+    for caracter in frase:
+        print(caracter.upper())
+
+if __name__ == "__main__":
+    run()
+```
+[![15](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/15.png?raw=true "15")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/15.png?raw=true "15")
+
+## Interrumpiendo ciclos con comandos break y continue
+
+Es posible alterar la iteración de los bucles en Python. Para ello, nos valdremos de las sentencias **break** y **continue**. Pero, ¿qué hacen estas sentencias?
+
+- **break** se utiliza para finalizar y salir el bucle, por ejemplo, si se cumple alguna condición.
+- Por su parte, **continue** salta al siguiente paso de la iteración, ignorando todas las sentencias que le siguen y que forman parte del bucle.
+
+```python
+def run():
+    # for contador in range(1000): #imprimir numeros pares hasta 1000
+    #     if contador % 2  != 0: # termino para decir diferente "!="
+    #         continue
+    #     print(contador)
+    
+    # for i in range(10000): #imprimir hasta que llegue al 5678
+    #     print(i)
+    #     if i == 5678:
+    #         break
+
+    texto = input("Escribe un texto:  ") #imprimir hasta que encuentre letra "o"
+    for letra in texto:
+        if letra == "o":
+            break
+        print(letra)
+
+if __name__ == "__main__":
+    run()
+```
+Primer bloque:
+
+[![16](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/16.png?raw=true "16")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/16.png?raw=true "16")
+
+Segundo bloque:
+
+[![17](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/17.png?raw=true "17")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/17.png?raw=true "17")
+
+Tercer bloque:
+
+[![18](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/18.png?raw=true "18")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/18.png?raw=true "18")
+
+## Proyecto: Prueba de primalidad
+
+Los números primos son aquellos que solo son divisibles entre ellos mismos y el 1, es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero. Dicho de otra forma, si haces la división por cualquier número que no sea 1 o él mismo, se obtiene un resto distinto de cero.
+
+[![19](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/19.png?raw=true "19")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/19.png?raw=true "19")
+
+Es necesario programar un código que verifique una entrada del usuario y realice la prueba si es o no un número primo:
+
+```python
+def es_primo(numero):
+    contador = 0
+
+    for i in range(1, numero + 1):
+        if i == 1 or i == numero:
+            continue
+        if numero % i == 0:
+            contador += 1
+    if contador == 0:
+        return True
+    else:
+        return False
+
+def run():
+    numero = int(input("Escribe un número:  "))
+    if es_primo(numero):
+        print("Es primo")
+    else:
+        print("No es primo")
+
+if  __name__  == "__main__":
+    run()
+```
+
+[![20](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/20.png?raw=true "20")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/20.png?raw=true "20")
+
+### Reto
+
+Mejorar el código de prueba de primalidad:
+
+```python
+def es_primo(numero):
+    contador = 0
+
+    if numero <= 1:
+        return False
+
+    for i in range(1, numero + 1):
+        if i == 1 or i == numero:
+            continue
+        if numero % i == 0:
+            contador += 1
+            break
+    if contador == 0:
+        return True
+    else:
+        return False
+
+def run():
+    numero = int(input("Escribe un número:  "))
+    if es_primo(numero):
+        print(str(numero) + " Es primo")
+    else:
+        print(str(numero) + " No es primo")
+
+if  __name__  == "__main__":
+    run()
+```
+
+[![21](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/21.png?raw=true "21")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/21.png?raw=true "21")
+
+## Proyecto: Videojuego adivinar número
+
+Para este proyecto se requiere un programa donde el usuario tenga varios intentos para adivinar un número entre 1 y 100 hasta ganar, es necesario utilizar bucles y comparativos para desarrollarlo.
+
+```python
+import random # Módulo para números aleatorios
+
+def run():
+	numero_aleatorio = random.randint(1, 100) #Aleatorio entre 1 y 100
+	numero_elegido = int(input("Elige un número del 1 al 100: "))
+	while numero_elegido != numero_aleatorio: #Mientras x sea diferente a y
+		if numero_elegido < numero_aleatorio:
+			print("Busca un número más grande")
+		else:
+			print("Busca un número más pequeño")
+		numero_elegido = int(input("Elige otro número"))
+	print("¡Gracias!")
+
+if __name__ == "__main__":
+	run()
+```
+
+Al ejecutarlo en la terminal se obtienen los siguientes resultados:
+
+[![22](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/22.png?raw=true "22")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/22.png?raw=true "22")
