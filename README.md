@@ -4,11 +4,41 @@ Profesor Facundo Garcia Martoni de Platzi.
 ![](https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png) ![](https://static.platzi.com/media/learningpath/badges/46.png) ![](https://static.platzi.com/media/achievements/badge-basico-python-bdcc67b3-031d-4dce-8e78-5699fb243149.png)
 
 
-**Tabla de Contenidos**
+## Tabla de Contenidos
 
-[TOCM]
-
-[TOC]
+- [Introducción](#introducción)
+  - [¿Por qué Python?](#por-qué-python)
+  - [¿Que es un algoritmo?](#que-es-un-algoritmo)
+  - [Herramientas de trabajo](#herramientas-de-trabajo) 
+- [Conceptos básicos de Python](#conceptos-básicos-de-python)
+  - [Explorando operadores aritméticos](#explorando-operadores-aritméticos)
+  - [Variables y Tipos de datos](#variables-y-tipos-de-datos)
+  - [Convertir un dato en un tipo diferente de dato](#convertir-un-dato-en-un-tipo-diferente-de-dato)
+  - [Operadores lógicos y de comparación](#operadores-lógicos-y-de-comparación)
+  - [Primer programa: Convertir moneda local a dólares](#primer-programa-convertir-moneda-local-a-dólares)
+- [Herramientas para programar](#herramientas-para-programar)
+  - [Condicionales](#condicionales)
+  - [Mejora de conversor con condicionales](#mejora-de-conversor-con-condicionales)
+  - [No repetir código con funciones](#no-repetir-código-con-funciones)
+  - [Modularizando nuestro conversor de monedas](#modularizando-nuestro-conversor-de-monedas)
+  - [Cadenas de carácteres y funciones Built-in](#cadenas-de-carácteres-y-funciones-built-in)
+    - [Funciones Built-in](#funciones-built-in)
+  - [Slices o rebanadas](#slices-o-rebanadas)
+  - [Proyecto: palíndromo](#proyecto-palíndromo)
+- [Bucles](#bucles)
+  - [Ciclo while](#ciclo-while)
+  - [Ciclo for](#ciclo-for)
+  - [Recorrer un string con un ciclo for](#recorrer-un-string-con-un-ciclo-for)
+  - [Interrumpiendo ciclos con comandos break y continue](#interrumpiendo-ciclos-con-comandos-break-y-continue)
+  - [Proyecto: Prueba de primalidad](#proyecto-prueba-de-primalidad)
+    - [Reto](#reto)
+  - [Proyecto: Videojuego adivinar número](#proyecto-videojuego-adivinar-número)
+- [Estructuras de datos](#estructuras-de-datos)
+  - [Almacenar varios valores en una variable: listas](#almacenar-varios-valores-en-una-variable-listas)
+  - [Entendiendo cómo funcionan las tuplas ](#entendiendo-cómo-funcionan-las-tuplas)
+  - [Diccionarios](#diccionarios)
+  - [Proyecto final: generador de contraseñas](#proyecto-final-generador-de-contraseñas)
+  - [Bonus: Atajos](#bonus-atajos)
 
 # Introducción
 
