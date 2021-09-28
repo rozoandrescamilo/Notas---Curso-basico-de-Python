@@ -530,3 +530,145 @@ if __name__ == "__main__":
 Al ejecutarlo en la terminal se obtienen los siguientes resultados:
 
 [![22](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/22.png?raw=true "22")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/22.png?raw=true "22")
+
+# Estructuras de datos
+
+## Almacenar varios valores en una variable: listas
+
+Entre las secuencias, el más versátil es la lista, para definir una se debe escribir es entre corchetes, separando sus elementos con comas cada uno.
+
+La lista en Python son variables que almacenan arrays, internamente cada posición puede ser un tipo de datos distinto.
+
+Las listas en Python son:
+
+- **heterogéneas:** pueden estar conformadas por elementos de distintos tipo, incluidos otras listas.
+- **mutables:** sus elementos pueden modificarse.
+Una lista en Python es una estructura de datos formada por una secuencia ordenada de objetos.
+
+Los elementos de una lista pueden accederse mediante su índice, siendo 0 el índice del primer elemento.
+
+Definir una variable con varios tipos de datos (Lista): **["Hola", 2, 4.5, True]**
+Agregar dato a lista: **variable.append(False)**
+Eliminar dato de la lista: **variable.pop(1)** -> Elimina posición 1 (El 2)
+
+Recorrer e imprimir:
+```python
+>>> for elemento in objetos:
+	print(elemento)
+
+#Permite sumar y operar listas ya que son dinámicas
+
+```
+[![23](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/23.png?raw=true "23")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/23.png?raw=true "23")
+
+[![24](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/24.png?raw=true "24")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/24.png?raw=true "24")
+
+## Entendiendo cómo funcionan las tuplas 
+
+Las tuplas son objetos de tipo secuencia, específicamente es un tipo de dato lista inmutable. Esta no puede modificarse de ningún modo después de su creación.
+Son muy similares a las listas y comparten varias de sus funciones y métodos integrados, aunque su principal diferencia es que son inmutables.
+
+Para convertir a tipos tuplas debe usar la función **tuple()**, la cual está integrada en el interprete Python.
+
+Definir una variable con varios tipos de datos **(Tupla): (1, 2, 3, 4, 5)**
+Comandos como **.append()** y **.pop()** no se pueden utilizar en tuplas.
+
+Recorrer e imprimir:
+```python
+for numero in mi_tupla:
+	print(numero)
+
+# No permite modificar son datos inmutables, pero permiten realizar ciclos de manera más eficiente (for)
+
+```
+
+[![25](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/25.png?raw=true "25")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/25.png?raw=true "25")
+
+## Diccionarios
+
+Son una estructura de datos mutable las cuales almacenan diferentes tipos de valores sin darle importancia a su orden. Identifican a cada elemento por una clave (Key). Se escriben entre {}.
+
+Algunas de las operaciones que se pueden hacer con diccionarios:
+
+- **.keys()** —> Retorna la clave de nuestro elemento
+- **.values()** —> Retorna una lista de elementos (valores del diccionario)
+- **.items()** —> Devuelve lista de tuplas (primero la clave y luego el valor)
+- **.clear()** —> Elimina todos los items del diccionario
+- **.pop(“n”)** —> Elimina el elemento ingresado
+
+```python
+def run():
+    mi_diccionario = {
+        "llave1" : 1,
+        "llave2" : 2,
+        "llave3" : 3,
+    }
+
+    # print(mi_diccionario['llave1']) #Se utiliza para imprimir cada llave con su valor
+    # print(mi_diccionario['llave2'])
+    # print(mi_diccionario['llave3'])
+
+    poblacion_paises = {
+        "Argentina" : 449388712,
+        "Brasil" : 210147125,
+        "Colombia" : 50372424
+    }
+
+    # print(poblacion_paises['Argentina']) # se utiliza para imprimir valro de Argentina
+
+    # for pais in poblacion_paises.keys(): # imprimir nombre de las llaves
+    #     print(pais)
+
+    # for pais in poblacion_paises.values(): # imprimir valores de las llaves
+    #     print(pais)
+
+    for pais, poblacion in poblacion_paises.items(): # imprimir nombre y valor de las llaves de manera organizada
+         print(pais + " Tiene " + str(poblacion) + " habitantes ")
+
+if __name__ == "__main__":
+    run()
+```
+
+[![26](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/26.png?raw=true "26")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/26.png?raw=true "26")
+
+## Proyecto final: generador de contraseñas
+
+Como último proyecto de este curso se plantea desarrollar un programa que genere una contraseña con carácteres aleatorios, entre mayúsculas, minúsculas,  números y carácteres especiales, teniendo en cuenta todos lo conceptos vistos anteriormente.
+
+```python
+import random
+
+def generar_contrasena(): #Listas con los carácteres 
+    MAYUS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z']
+    MINUS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z']
+    NUMS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    CHARS = ['*', '+', '-', '/', '@', '_', '?', '!', '[', '{', '(', ')', '}', ']', ',', ';', '.', '>', '<', '~', '°', '^', '&', '$', '#', '"']
+
+    caracteres = MAYUS + MINUS + NUMS + CHARS
+
+    contrasena = [] #Lista donde se alamacenará la contraseña
+
+    for i in range(15):
+        caracter_random = random.choice(caracteres) #Elige un valor aleatorio de las listas
+        contrasena.append(caracter_random) 
+    
+    contrasena = ''.join(contrasena) #Convierte en lista
+    return contrasena
+
+def run():
+    contrasena = generar_contrasena()
+    print('Tu nueva contraseña es: ' + contrasena)
+
+if __name__ == "__main__":
+    run()
+```
+
+Al ejecutarlo en la terminal se obtienen los siguientes resultados:
+
+[![27](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/27.png?raw=true "27")](https://github.com/hackmilo/Notas---Curso-basico-de-Python/blob/main/img/27.png?raw=true "27")
+
+## Bonus: Atajos
+- Link de atajos: [VS Code Atajos](https://filisantillan.com/blog/vscode-atajos/ "VS Code Atajos")
+- Cambiar tema de colores en VS Code: **Crtl+K Crtl+T**
+- Hacer comentario en VS Code: **Crtl+K Crtl+C**
+- Recorte: **Windows+Shift+S**
