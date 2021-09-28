@@ -216,7 +216,7 @@ Ejemplo: La función de una resta con los argumentos a y b.
 
 ```python
 >>> def resta(a, b):
-			return a - b
+	return a - b
 
 >>> resta(30, 10)
 20
