@@ -61,7 +61,7 @@ Dentro de nuestra terminal se inicializa Python con el comando **py** y se podr�
 - Suma: **+**
 - Resta: **-**
 - Divisi처n: **/**
-- Multiplicaci처n: *****
+- Multiplicaci처n: *
 - Cociente de una divisi처n: **//**
 - Residuo de una divisi처n: **%**
 
