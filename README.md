@@ -1,4 +1,5 @@
 # Notas - Curso básico de Python
+Profesor Facundo Garcia Martoni de Platzi.
 
 ![](https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png) ![](https://static.platzi.com/media/learningpath/badges/46.png) ![](https://static.platzi.com/media/achievements/badge-basico-python-bdcc67b3-031d-4dce-8e78-5699fb243149.png)
 
